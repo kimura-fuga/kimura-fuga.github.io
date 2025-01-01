@@ -44,7 +44,14 @@
             background-color: #0056b3;
         }
     </style>
-    <script type="module" src="./pkg/hnyfuck.js"></script>
+    <!-- <script type="module" src="./pkg/hnyfuck.js"></script> -->
+</head>
+<body>
+    <input type="text" id="code">
+    <button onclick="run()">Run</button>
+
+    <p id="output"></p>
+
     <script type="module">
         import init, { hny_run } from "./pkg/hnyfuck.js";
 
@@ -58,11 +65,5 @@
 
         window.run = run;
     </script>
-</head>
-<body>
-    <input type="text" id="code">
-    <button onclick="run()">Run</button>
-
-    <p id="output"></p>
 </body>
 </html>
