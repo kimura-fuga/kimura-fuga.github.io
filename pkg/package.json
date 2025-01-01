@@ -1,0 +1,15 @@
+{
+  "name": "hnyfuck",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "hnyfuck_bg.wasm",
+    "hnyfuck.js",
+    "hnyfuck.d.ts"
+  ],
+  "main": "hnyfuck.js",
+  "types": "hnyfuck.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
