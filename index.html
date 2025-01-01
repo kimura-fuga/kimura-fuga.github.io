@@ -19,9 +19,12 @@
             padding: 10px;
             font-size: 16px;
             margin-bottom: 10px;
-            width: 300px;
+            width: 600px; /* 幅を広くする */
+            height: 200px; /* 高さを追加 */
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-family: monospace; /* コードブロックのようにする */
+            white-space: pre; /* 改行を保持する */
         }
 
         button {
@@ -45,12 +48,15 @@
 
         function run() {
             init().then(() => {
-                hny_run();
+                const output = hny_run();
+                document.getElementById("output").textContent = output;
             });
         }
     </script>
 
     <input type="text" id="code">
     <button onclick="run()">Run</button>
+
+    <p id="output"></p>
 </body>
 </html>

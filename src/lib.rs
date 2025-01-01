@@ -316,4 +316,14 @@ mod test {
         state.increment();
         assert!(state.cond());
     }
+
+    #[test]
+    fn happy_new_year() {
+        let code =
+            "Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Happy Happy New Year Year Happy New Year Year Happy Year Happy Year Happy New Year Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy New Year Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Happy New Happy New Happy New Happy New Happy Year New New New Year New Year New Year Year Happy Year Happy Year New New Year Happy Year Happy Year Happy Year Year New Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year New Year New Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year New Happy New Happy New Year Happy Year Happy Year New New Year Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year New New Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Year New Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year New Happy New Happy New Year New New Year Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year New Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year Happy Year New Happy Year Happy Year Happy Year Happy Year Year New New Year Happy Year Happy Year Happy Year Happy Year Happy Year Year New Happy New Happy New Year Happy Year New";
+
+        let mut hny = HnyFuck::new(TokenStream::from_str(code));
+        hny.run();
+        assert_eq!(hny.state.output, "Happy New Year!");
+    }
 }
