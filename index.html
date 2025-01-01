@@ -57,7 +57,8 @@
 
         function run() {
             init().then(() => {
-                const output = hny_run();
+                const code = document.getElementById("code").value;
+                const output = hny_run(code);
                 console.log(output);
                 document.getElementById("output").textContent = output;
             });
