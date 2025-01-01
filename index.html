@@ -24,7 +24,10 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             font-family: monospace; /* コードブロックのようにする */
-            white-space: pre; /* 改行を保持する */
+            white-space: pre-wrap; /* 改行を保持し、折り返す */
+            overflow-wrap: break-word; /* 長い単語を折り返す */
+            top: 10px;
+            right: 10px;
         }
 
         button {
@@ -49,6 +52,7 @@
         function run() {
             init().then(() => {
                 const output = hny_run();
+                console.log(output);
                 document.getElementById("output").textContent = output;
             });
         }
